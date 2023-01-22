@@ -8,7 +8,7 @@ import java.util.*;
 @Service
 public class InMemoryScanEge implements Converting {
   public List<Dao>getStats() throws FileNotFoundException {
-      try(Scanner sc = new Scanner(new File("C:\\Users\\hacer\\MavenProjects\\EgeAnalysis\\src\\main\\resources\\EgeAnswer.txt"))){
+     try(Scanner sc = new Scanner(new File("C:\\Users\\hacer\\MavenProjects\\EgeAnalysis\\src\\main\\resources\\EgeAnswer.txt"))){
           sc.useDelimiter("\\A");
           String result = sc.hasNext() ? sc.next() : "";
           List<Dao>dao = convertCsvToLines(result);
